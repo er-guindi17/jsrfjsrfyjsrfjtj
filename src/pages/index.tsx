@@ -158,7 +158,7 @@ export default function Index() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Paquete Bot Personalizado */}
-            <Card className="bg-gray-800 border-gray-700 relative rounded-lg overflow-hidden">
+            <Card className="bg-gray-800 border-gray-700 relative">
               <CardHeader>
                 <CardTitle className="text-2xl text-white">Bot de Discord Personalizado</CardTitle>
                 <CardDescription className="text-gray-400">
@@ -206,9 +206,9 @@ export default function Index() {
             </Card>
 
             {/* Paquete Bot + Hosting */}
-            <Card className="bg-gray-800 border-purple-500 relative rounded-lg overflow-hidden">
+            <Card className="bg-gray-800 border-purple-500 relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-purple-600 text-white px-4 py-1 rounded-lg">
+                <Badge className="bg-purple-600 text-white px-4 py-1">
                   <Star className="w-4 h-4 mr-1" />
                   ¡Más Popular!
                 </Badge>
