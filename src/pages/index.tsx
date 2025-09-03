@@ -18,7 +18,7 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-gray-950 text-white">
 
-      {/* Hero */}
+      {/* Sección Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-gray-950"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -61,7 +61,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Características */}
+      {/* Sección de Características */}
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -157,126 +157,127 @@ export default function Index() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
             {/* Paquete Bot Personalizado */}
-            <Card className="bg-gray-800 border-gray-700 relative">
-              <CardHeader>
-                <CardTitle className="text-2xl text-white">Bot de Discord Personalizado</CardTitle>
-                <CardDescription className="text-gray-400">
-                  Un bot completamente personalizado construido según tus especificaciones
-                </CardDescription>
-                <div className="mt-4">
-                  <span className="text-4xl font-bold text-white">$199</span>
-                  <span className="text-gray-400 ml-2">pago único</span>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Desarrollo de bot completamente personalizado
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Hasta 20 comandos personalizados
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Funciones básicas de moderación
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Código fuente incluido
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Guía de configuración y despliegue
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    30 días de soporte
-                  </li>
-                </ul>
-                <Button 
-                  className="w-full bg-purple-600 hover:bg-purple-700"
-                  onClick={handleOrderBot}
-                >
-                  ¡Pedir Bot Personalizado!
-                </Button>
-              </CardContent>
-            </Card>
+            <motion.div whileHover={hoverCard}>
+              <Card className="bg-gray-800 border-gray-700 rounded-lg overflow-hidden h-full relative">
+                <CardHeader>
+                  <CardTitle className="text-2xl text-white">Bot de Discord Personalizado</CardTitle>
+                  <CardDescription className="text-gray-400">
+                    Un bot completamente personalizado construido según tus especificaciones
+                  </CardDescription>
+                  <div className="mt-4">
+                    <span className="text-4xl font-bold text-white">$199</span>
+                    <span className="text-gray-400 ml-2">pago único</span>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      Desarrollo de bot completamente personalizado
+                    </li>
+                    <li className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      Hasta 20 comandos personalizados
+                    </li>
+                    <li className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      Funciones básicas de moderación
+                    </li>
+                    <li className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      Código fuente incluido
+                    </li>
+                    <li className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      Guía de configuración y despliegue
+                    </li>
+                    <li className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      30 días de soporte
+                    </li>
+                  </ul>
+                  <motion.div whileHover={hoverButton}>
+                    <Button className="w-full bg-purple-600 hover:bg-purple-700" onClick={handleOrderBot}>
+                      ¡Pedir Bot Personalizado!
+                    </Button>
+                  </motion.div>
+                </CardContent>
+              </Card>
+            </motion.div>
 
             {/* Paquete Bot + Hosting */}
-            <Card className="bg-gray-800 border-purple-500 relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-purple-600 text-white px-4 py-1">
-                  <Star className="w-4 h-4 mr-1" />
-                  ¡Más Popular!
-                </Badge>
-              </div>
-              <CardHeader>
-                <CardTitle className="text-2xl text-white">Bot + Hosting 24/7</CardTitle>
-                <CardDescription className="text-gray-400">
-                  Bot personalizado con hosting confiable en la nube incluido
-                </CardDescription>
-                <div className="mt-4">
-                  <span className="text-4xl font-bold text-white">$299</span>
-                  <span className="text-gray-400 ml-2">+ $9/mes hosting</span>
+            <motion.div whileHover={hoverCard}>
+              <Card className="bg-gray-800 border-purple-500 rounded-lg overflow-hidden h-full relative">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <Badge className="bg-purple-600 text-white px-4 py-1">
+                    <Star className="w-4 h-4 mr-1" />
+                    ¡Más Popular!
+                  </Badge>
                 </div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Todo lo del Bot Personalizado
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <Clock className="w-4 h-4 text-purple-400 mr-1" />
-                    Hosting 24/7 en la nube
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    99.9% de tiempo activo garantizado
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Actualizaciones y mantenimiento automático
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Soporte prioritario
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Monitoreo de rendimiento
-                  </li>
-                </ul>
-                <Button 
-                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
-                  onClick={handleOrderBotWithHosting}
-                >
-                  ¡Quiero Bot + Hosting!
-                </Button>
-              </CardContent>
-            </Card>
+                <CardHeader>
+                  <CardTitle className="text-2xl text-white">Bot + Hosting 24/7</CardTitle>
+                  <CardDescription className="text-gray-400">
+                    Bot personalizado con hosting confiable en la nube incluido
+                  </CardDescription>
+                  <div className="mt-4">
+                    <span className="text-4xl font-bold text-white">$299</span>
+                    <span className="text-gray-400 ml-2">+ $9/mes hosting</span>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      Todo lo del Bot Personalizado
+                    </li>
+                    <li className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      <Clock className="w-4 h-4 text-purple-400 mr-1" />
+                      Hosting 24/7 en la nube
+                    </li>
+                    <li className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      99.9% de tiempo activo garantizado
+                    </li>
+                    <li className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      Actualizaciones y mantenimiento automático
+                    </li>
+                    <li className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      Soporte prioritario
+                    </li>
+                    <li className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      Monitoreo de rendimiento
+                    </li>
+                  </ul>
+                  <motion.div whileHover={hoverButton}>
+                    <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700" onClick={handleOrderBotWithHosting}>
+                      ¡Quiero Bot + Hosting!
+                    </Button>
+                  </motion.div>
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="bg-gray-950 border-t border-gray-800 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex justify-center items-center mb-4">
-              <Bot className="w-8 h-8 text-purple-400 mr-2" />
-              <span className="text-2xl font-bold text-white">BotForge</span>
-            </div>
-            <p className="text-gray-400 mb-4">
-              Creando bots de Discord personalizados que unen comunidades 💜
-            </p>
-            <div className="flex justify-center space-x-6 text-sm text-gray-500">
-              <span>© 2024 BotForge. Todos los derechos reservados.</span>
-            </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex justify-center items-center mb-4">
+            <Bot className="w-8 h-8 text-purple-400 mr-2" />
+            <span className="text-2xl font-bold text-white">BotForge</span>
+          </div>
+          <p className="text-gray-400 mb-4">
+            Creando bots de Discord personalizados que unen comunidades 💜
+          </p>
+          <div className="flex justify-center space-x-6 text-sm text-gray-500">
+            <span>© 2024 BotForge. Todos los derechos reservados.</span>
           </div>
         </div>
       </footer>
