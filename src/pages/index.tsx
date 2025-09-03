@@ -17,7 +17,7 @@ export default function Index() {
     navigate('/pedido');
   };
 
-  // Animaciones
+  // Animaciones generales
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
@@ -31,10 +31,18 @@ export default function Index() {
   const staggerContainer = {
     hidden: {},
     visible: {
-      transition: {
-        staggerChildren: 0.2
-      }
+      transition: { staggerChildren: 0.2 }
     }
+  };
+
+  // Animación de hover para cards
+  const hoverCard = {
+    hover: { scale: 1.05, boxShadow: "0px 10px 30px rgba(139, 92, 246, 0.5)" }
+  };
+
+  // Animación de hover para botones
+  const hoverButton = {
+    hover: { scale: 1.05, transition: { type: "spring", stiffness: 300 } }
   };
 
   return (
@@ -102,7 +110,7 @@ export default function Index() {
             animate="visible"
             variants={staggerContainer}
           >
-            <motion.div variants={fadeInUp}>
+            <motion.div variants={fadeInUp} whileHover="hover" variants={hoverButton}>
               <Button 
                 size="lg" 
                 className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 text-lg"
@@ -111,7 +119,7 @@ export default function Index() {
                 ¡Quiero Mi Bot Personalizado!
               </Button>
             </motion.div>
-            <motion.div variants={fadeInUp}>
+            <motion.div variants={fadeInUp} whileHover="hover" variants={hoverButton}>
               <Button size="lg" variant="outline" className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 text-lg">
                 Ver Ejemplos
               </Button>
@@ -150,8 +158,8 @@ export default function Index() {
               color: "bg-green-600",
               borderColor: "hover:border-green-500"
             }].map((item, index) => (
-              <motion.div key={index} variants={fadeInUp}>
-                <Card className={`bg-gray-800 border-gray-700 ${item.borderColor} transition-colors`}>
+              <motion.div key={index} variants={fadeInUp} whileHover="hover" variants={hoverCard}>
+                <Card className={`bg-gray-800 border-gray-700 ${item.borderColor} transition-colors cursor-pointer`}>
                   <CardHeader>
                     <div className={`w-12 h-12 ${item.color} rounded-lg flex items-center justify-center mb-4`}>
                       {item.icon}
@@ -193,8 +201,8 @@ export default function Index() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Bot Personalizado */}
-            <motion.div variants={fadeInUp}>
-              <Card className="bg-gray-800 border-gray-700 relative">
+            <motion.div variants={fadeInUp} whileHover="hover" variants={hoverCard}>
+              <Card className="bg-gray-800 border-gray-700 relative cursor-pointer">
                 <CardHeader>
                   <CardTitle className="text-2xl text-white">Bot de Discord Personalizado</CardTitle>
                   <CardDescription className="text-gray-400">
@@ -221,19 +229,21 @@ export default function Index() {
                       </li>
                     ))}
                   </ul>
-                  <Button 
-                    className="w-full bg-purple-600 hover:bg-purple-700"
-                    onClick={handleOrderBot}
-                  >
-                    ¡Pedir Bot Personalizado!
-                  </Button>
+                  <motion.div whileHover="hover" variants={hoverButton}>
+                    <Button 
+                      className="w-full bg-purple-600 hover:bg-purple-700"
+                      onClick={handleOrderBot}
+                    >
+                      ¡Pedir Bot Personalizado!
+                    </Button>
+                  </motion.div>
                 </CardContent>
               </Card>
             </motion.div>
 
             {/* Bot + Hosting */}
-            <motion.div variants={fadeInUp}>
-              <Card className="bg-gray-800 border-purple-500 relative">
+            <motion.div variants={fadeInUp} whileHover="hover" variants={hoverCard}>
+              <Card className="bg-gray-800 border-purple-500 relative cursor-pointer">
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <Badge className="bg-purple-600 text-white px-4 py-1">
                     <Star className="w-4 h-4 mr-1" />
@@ -266,12 +276,14 @@ export default function Index() {
                       </li>
                     ))}
                   </ul>
-                  <Button 
-                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
-                    onClick={handleOrderBotWithHosting}
-                  >
-                    ¡Quiero Bot + Hosting!
-                  </Button>
+                  <motion.div whileHover="hover" variants={hoverButton}>
+                    <Button 
+                      className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+                      onClick={handleOrderBotWithHosting}
+                    >
+                      ¡Quiero Bot + Hosting!
+                    </Button>
+                  </motion.div>
                 </CardContent>
               </Card>
             </motion.div>
