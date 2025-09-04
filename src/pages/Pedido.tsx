@@ -247,24 +247,57 @@ export default function Pedido() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-950 border-t border-gray-800 py-12">
+      <motion.footer 
+        className="bg-gray-950 border-t border-gray-800 py-12 mt-20"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex justify-center items-center mb-4">
-              <Bot className="w-8 h-8 text-purple-400 mr-2" />
-              <span className="text-2xl font-bold text-white">Discord Bot Shop</span>
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center text-center md:text-left gap-8">
+            
+            {/* Logo + descripción */}
+            <div>
+              <div className="flex justify-center md:justify-start items-center mb-4">
+                <Bot className="w-8 h-8 text-purple-400 mr-2" />
+                <span className="text-2xl font-bold text-white">Discord Bot Shop</span>
+              </div>
+              <p className="text-gray-400 max-w-md">
+                Creando bots de Discord personalizados que unen comunidades 💜
+              </p>
             </div>
-            <p className="text-gray-400 mb-4">
-              Creando bots de Discord personalizados que unen comunidades 💜
-            </p>
-            <p className="text-gray-400 mb-4">
-              Página y servicios creados por er.guindilla
-            </p>
-            <div className="flex justify-center space-x-6 text-sm text-gray-500">
-              <span>© 2025 Discord Bot Shop. Todos los derechos reservados.</span>
+
+            {/* Links */}
+            <div className="flex flex-col sm:flex-row gap-6 text-gray-400 text-sm justify-center">
+              <button 
+                onClick={handleDiscordJoin}
+                className="hover:text-purple-400 transition-colors"
+              >
+                Unirse al Discord
+              </button>
+              <button 
+                onClick={handleOpenTicket}
+                className="hover:text-purple-400 transition-colors"
+              >
+                Abrir Ticket
+              </button>
+              <button 
+                onClick={handleBackToHome}
+                className="hover:text-purple-400 transition-colors"
+              >
+                Volver al inicio
+              </button>
             </div>
           </div>
+
+          {/* Créditos */}
+          <div className="mt-8 border-t border-gray-800 pt-6 text-center text-gray-500 text-xs">
+            <p>© 2025 Discord Bot Shop. Todos los derechos reservados.</p>
+            <p className="mt-1">
+              Página y servicios creados por <span className="text-purple-400">er.guindilla</span>
+            </p>
+          </div>
         </div>
-      </footer>
+      </motion.footer>
   );
 }
