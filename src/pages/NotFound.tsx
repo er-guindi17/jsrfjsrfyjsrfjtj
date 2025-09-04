@@ -24,18 +24,13 @@ export default function NotFound() {
         }}
         className="text-center relative z-10"
       >
-        {/* Icono animado */}
+        {/* Icono animado (solo entrada) */}
         <motion.div
           variants={{
             hidden: { opacity: 0, y: -20 },
             visible: { opacity: 1, y: 0 }
           }}
-          animate={{ y: [0, -10, 0] }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
+          transition={{ duration: 0.8, type: "spring" }}
           className="flex justify-center mb-6"
         >
           <Bot className="w-20 h-20 text-purple-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.6)]" />
@@ -53,7 +48,7 @@ export default function NotFound() {
           404
         </motion.h1>
 
-        {/* Mensaje con efecto de fade */}
+        {/* Mensaje */}
         <motion.p
           variants={{
             hidden: { opacity: 0, y: 20 },
@@ -64,14 +59,14 @@ export default function NotFound() {
           Oops... página no encontrada
         </motion.p>
 
-        {/* Botón con animación */}
+        {/* Botón */}
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Link
             to="/"
-            className="relative inline-block px-8 py-3 text-lg font-semibold rounded-xl overflow-hidden group"
+            className="relative inline-block px-8 py-3 text-lg font-semibold rounded-xl overflow-hidden group no-underline"
           >
-            <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 transition-transform duration-300 group-hover:scale-110" />
-            <span className="absolute inset-0 bg-white/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
+            <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 transition-transform duration-300 group-hover:scale-110 rounded-xl" />
+            <span className="absolute inset-0 bg-white/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity rounded-xl" />
             <span className="relative text-white">Volver al inicio</span>
           </Link>
         </motion.div>
