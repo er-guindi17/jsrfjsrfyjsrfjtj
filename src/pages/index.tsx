@@ -245,7 +245,7 @@ export default function Index() {
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    30% de descuento en la 2° compra (normal o hosting) 
+                    30% de descuento en la 2° compra
                   </li>
                 </ul>
                 <Button 
@@ -266,13 +266,16 @@ export default function Index() {
           <div className="text-center">
             <div className="flex justify-center items-center mb-4">
               <Bot className="w-8 h-8 text-purple-400 mr-2" />
-              <span className="text-2xl font-bold text-white">BotForge</span>
+              <span className="text-2xl font-bold text-white">Discord Bot Shop</span>
             </div>
             <p className="text-gray-400 mb-4">
               Creando bots de Discord personalizados que unen comunidades 💜
             </p>
+            <p className="text-gray-400 mb-4">
+              Página y servicios creados por er.guindilla
+            </p>
             <div className="flex justify-center space-x-6 text-sm text-gray-500">
-              <span>© 2024 BotForge. Todos los derechos reservados.</span>
+              <span>© 2025 Discord Bot Shop. Todos los derechos reservados.</span>
             </div>
           </div>
         </div>
