@@ -13,11 +13,11 @@ export default function Pedido() {
   };
 
   const handleDiscordJoin = () => {
-    window.open('https://discord.gg/xxxxxx', '_blank');
+    window.open('https://discord.gg/BnaMtfTXth', '_blank');
   };
 
   const handleOpenTicket = () => {
-    window.open('https://discord.com/channels/1407042605665095792/1407047567556214856', '_blank');
+    window.open('https://discord.com/channels/1412114615634231499/1412114787910947006', '_blank');
   };
 
   // Variantes de animación
