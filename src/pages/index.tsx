@@ -32,7 +32,7 @@ export default function Index() {
               </div>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
-              BotForge
+              Discord Bot Shop
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Bots de Discord Personalizados Hechos a Tu Medida 🤖✨
@@ -52,9 +52,7 @@ export default function Index() {
                 </Button>
               </motion.div>
               <motion.div whileHover={hoverButton}>
-                <Button size="lg" variant="outline" className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 text-lg">
-                  Ver Ejemplos
-                </Button>
+                
               </motion.div>
             </div>
           </div>
