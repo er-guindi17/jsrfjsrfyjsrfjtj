@@ -149,8 +149,8 @@ export default function Index() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Precios Súper Claros 💰</h2>
-            <p className="text-xl text-gray-400">Elige el paquete que mejor se adapte a tus necesidades</p>
+            <h2 className="text-4xl font-bold text-white mb-4">Precios Súper Bajos 💰</h2>
+            <p className="text-xl text-gray-400">Elige el paquete que mejor se adapte a tus necesidades (el precio depende de la cantidad de comandos que se le añade al bot pero el precio inicial es el que aparece)</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -162,7 +162,7 @@ export default function Index() {
                   Un bot completamente personalizado construido según tus especificaciones
                 </CardDescription>
                 <div className="mt-4">
-                  <span className="text-4xl font-bold text-white">$199</span>
+                  <span className="text-4xl font-bold text-white">€10</span>
                   <span className="text-gray-400 ml-2">pago único</span>
                 </div>
               </CardHeader>
@@ -186,7 +186,7 @@ export default function Index() {
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Guía de configuración y despliegue
+                    Entrega máximo en 3 días
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
@@ -216,8 +216,8 @@ export default function Index() {
                   Bot personalizado con hosting confiable en la nube incluido
                 </CardDescription>
                 <div className="mt-4">
-                  <span className="text-4xl font-bold text-white">$299</span>
-                  <span className="text-gray-400 ml-2">+ $9/mes hosting</span>
+                  <span className="text-4xl font-bold text-white">€10</span>
+                  <span className="text-gray-400 ml-2">+ €7/mes hosting</span>
                 </div>
               </CardHeader>
               <CardContent>
@@ -233,7 +233,7 @@ export default function Index() {
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    99.9% de tiempo activo garantizado
+                    100% de tiempo activo garantizado
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
@@ -245,7 +245,7 @@ export default function Index() {
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Monitoreo de rendimiento
+                    30% de descuento en la 2° compra (normal o hosting) 
                   </li>
                 </ul>
                 <Button 
