@@ -4,31 +4,75 @@ import { Bot } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-gray-950 text-white flex flex-col justify-center items-center">
+    <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white flex flex-col justify-center items-center relative overflow-hidden">
+      {/* Fondo animado */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6 }}
-        className="text-center"
+        className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.15),transparent_70%)]"
+        animate={{ scale: [1, 1.2, 1] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.3 }
+          }
+        }}
+        className="text-center relative z-10"
       >
+        {/* Icono animado */}
         <motion.div
-          initial={{ rotate: -15, opacity: 0 }}
-          animate={{ rotate: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          variants={{
+            hidden: { opacity: 0, y: -20 },
+            visible: { opacity: 1, y: 0 }
+          }}
+          animate={{ y: [0, -10, 0] }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
           className="flex justify-center mb-6"
         >
-          <Bot className="w-20 h-20 text-purple-400" />
+          <Bot className="w-20 h-20 text-purple-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.6)]" />
         </motion.div>
 
-        <h1 className="text-6xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-400 mb-8">Oops... página no encontrada</p>
+        {/* Código de error */}
+        <motion.h1
+          variants={{
+            hidden: { opacity: 0, scale: 0.8 },
+            visible: { opacity: 1, scale: 1 }
+          }}
+          transition={{ type: "spring", stiffness: 120 }}
+          className="text-7xl md:text-8xl font-extrabold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent"
+        >
+          404
+        </motion.h1>
 
-        <motion.div whileHover={{ scale: 1.1 }}>
+        {/* Mensaje con efecto de fade */}
+        <motion.p
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 }
+          }}
+          className="text-lg md:text-xl text-gray-300 mb-10"
+        >
+          Oops... página no encontrada
+        </motion.p>
+
+        {/* Botón con animación */}
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Link
             to="/"
-            className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+            className="relative inline-block px-8 py-3 text-lg font-semibold rounded-xl overflow-hidden group"
           >
-            Volver al inicio
+            <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 transition-transform duration-300 group-hover:scale-110" />
+            <span className="absolute inset-0 bg-white/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
+            <span className="relative text-white">Volver al inicio</span>
           </Link>
         </motion.div>
       </motion.div>
