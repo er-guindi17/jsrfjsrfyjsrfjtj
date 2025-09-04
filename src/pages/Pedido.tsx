@@ -247,27 +247,24 @@ export default function Pedido() {
       </section>
 
       {/* Footer */}
-      <motion.footer
-        className="bg-gray-950 border-t border-gray-800 py-8"
-        variants={fadeInUp}
-      >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <footer className="bg-gray-950 border-t border-gray-800 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <motion.div
-              className="flex justify-center items-center mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <Bot className="w-6 h-6 text-purple-400 mr-2" />
-              <span className="text-xl font-bold text-white">BotForge</span>
-            </motion.div>
-            <p className="text-gray-400 text-sm">
-              ¡Estamos emocionados de crear tu bot perfecto! 🚀💜
+            <div className="flex justify-center items-center mb-4">
+              <Bot className="w-8 h-8 text-purple-400 mr-2" />
+              <span className="text-2xl font-bold text-white">Discord Bot Shop</span>
+            </div>
+            <p className="text-gray-400 mb-4">
+              Creando bots de Discord personalizados que unen comunidades 💜
             </p>
+            <p className="text-gray-400 mb-4">
+              Página y servicios creados por er.guindilla
+            </p>
+            <div className="flex justify-center space-x-6 text-sm text-gray-500">
+              <span>© 2025 Discord Bot Shop. Todos los derechos reservados.</span>
+            </div>
           </div>
         </div>
-      </motion.footer>
-    </motion.div>
+      </footer>
   );
 }
