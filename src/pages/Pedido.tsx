@@ -255,7 +255,7 @@ export default function Pedido() {
               <span className="text-2xl font-bold text-white">Discord Bot Shop</span>
             </div>
             <p className="text-gray-400 mb-4">
-              Creando bots de Discord personalizados que unen comunidades 💜
+              Creando bots de Discord personalizados que unen comunidades 💚
             </p>
             <p className="text-gray-400 mb-4">
               Página y servicios creados por er.guindilla
