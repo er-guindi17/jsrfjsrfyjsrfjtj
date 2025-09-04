@@ -58,14 +58,13 @@ export default function Index() {
           </div>
         </div>
       </section>
-
       {/* Características */}
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">¿Por Qué Elegir BotForge? 🚀</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">¿Por Qué Elegir Discord Bot Shop? 🚀</h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              No solo construimos bots - creamos experiencias digitales hechas a medida para tu comunidad
+              No solo construimos bots - creamos experiencias digitales hechas a medida para tu comunidad de Discord
             </p>
           </div>
           
@@ -140,7 +139,7 @@ export default function Index() {
                 <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                 <span className="text-white font-semibold">Estadísticas</span>
               </div>
-              <p className="text-gray-400 text-sm">Insights del servidor y estadísticas de usuarios</p>
+              <p className="text-gray-400 text-sm">Insights del servidor, estadísticas de usuarios y más</p>
             </div>
           </div>
         </div>
